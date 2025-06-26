@@ -13,7 +13,15 @@ async function enviarScript(scriptText){
 		textarea.dispatchEvent(new Event('change', {bubbles: true}));
 	
 		setTimeout(() => {
-			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click();
+			const enterEvent = new KeyboardEvent("keydown", {
+				bubbles: true,
+				cancelable: true,
+				key: "Enter",
+				code: "Enter",
+				keyCode: 13,
+				which: 13
+			});
+			textarea.dispatchEvent(enterEvent);
 		}, 100);
 		
 		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250));
