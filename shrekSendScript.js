@@ -3,7 +3,7 @@ async function enviarScript(scriptText){
 	main = document.querySelector("#main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
 	
-	if(!textarea) throw new Error("Não há uma conversa aberta")
+	if(!textarea) throw new Error("There is no open conversation")
 	
 	for(const line of lines){
 		console.log(line)
@@ -3708,4 +3708,4 @@ black) Oh, that's funny. Oh. Oh. I can't
 breathe. I can't breathe.
 
 THE END
-`).then(e => console.log(`Código finalizado, ${e} mensagens enviadas`)).catch(console.error)
+`).then(e => console.log(`Finished code, ${e} messages sent`)).catch(console.error)

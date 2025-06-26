@@ -3,7 +3,7 @@ async function enviarScript(scriptText){
 	main = document.querySelector("#main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
 	
-	if(!textarea) throw new Error("Não há uma conversa aberta")
+	if(!textarea) throw new Error("There is no open conversation")
 	
 	for(const line of lines){
 		console.log(line)
@@ -1400,4 +1400,4 @@ I'm sorry. I'm sorry, everyone. Can we stop here?
 I'm not making a major life decision during a production number!
 All right. Take ten, everybody. Wrap it up, guys.
 I had virtually no rehearsal for that.
-`).then(e => console.log(`Código finalizado, ${e} mensagens enviadas`)).catch(console.error)
+`).then(e => console.log(`Finished code, ${e} messages sent`)).catch(console.error)
